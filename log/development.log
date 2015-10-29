@@ -4831,3 +4831,14 @@ Started GET "/songs/new" for 127.0.0.1 at 2015-10-29 14:25:20 -0600
 Processing by SongsController#new as HTML
   Rendered songs/new.html.haml within layouts/application (5.2ms)
 Completed 200 OK in 82ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-29 14:30:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/songs" for 127.0.0.1 at 2015-10-29 14:30:08 -0600
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered songs/index.html.haml within layouts/application (30.5ms)
+Completed 200 OK in 323ms (Views: 296.1ms | ActiveRecord: 0.5ms)
