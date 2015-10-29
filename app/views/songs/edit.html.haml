@@ -1,0 +1,20 @@
+.song
+  .container
+    = form_for(@song) do |f|
+      .field
+        = f.label :song
+        %br/
+        = f.text_field :singer
+        %br/
+        = f.text_field :writer
+        %br/
+        = f.date_field :release_date
+        %br/
+        = f.text_field :genere
+        %br/
+        = f.text_field :length
+        %br/
+        = f.text_field :title
+        %br/
+      .actions
+        = f.submit "Update"

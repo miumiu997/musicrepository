@@ -1,0 +1,26 @@
+
+%h1 All Songs
+ 
+%table#songs
+  %thead
+    %tr
+      %th Title
+      %th Singer
+      %th Writer 
+      %th Release Date
+      %th Genere
+      %th Length  
+      %th Edit 
+      %th Delete 
+  %tbody
+    - @songs.each do |song|
+      %tr
+        %td= song.title
+        %td= song.singer 
+        %td= song.writer 
+        %td= song.release_date
+        %td= song.genere
+        %td= song.length  
+        %td= link_to 'Edit', :action => 'edit' ,:id => song.id 
+        %td= link_to 'Delete', song_path(song), :method => :delete 
+  = link_to 'Add new song', '/songs/new'

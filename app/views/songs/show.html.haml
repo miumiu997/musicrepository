@@ -1,0 +1,15 @@
+%h2 Details about #{@song.title}
+ 
+%ul#details
+  %li
+    Title:
+    = @song.title
+  %li
+    Released on:
+    = @song.release_date.strftime("%B %d, %Y")
+ 
+%h3 Genere:
+ 
+%p#genere = @song.genere
+ 
+= link_to 'Back to song list', songs_path

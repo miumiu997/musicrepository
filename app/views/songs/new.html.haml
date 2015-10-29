@@ -1,0 +1,24 @@
+%h2 Create New Song
+ 
+= form_tag songs_path, :method => :post do
+ 
+  = label :song, :title, 'Title'
+  = text_field :song, :title 
+
+  = label :song, :singer, 'Singer'
+  = text_field :song, :singer 
+
+  = label :song, :writer, 'Writer'
+  = text_field :song, :writer  
+ 
+  = label :song, :release_date, 'Release date'
+  = text_field :song, :release_date 
+
+  = label :song, :genere, 'Genere'
+  = text_field :song, :genere 
+
+  = label :song, :length, 'Lenght'
+  = text_field :song, :length
+
+ 
+  = submit_tag 'Save Changes'
